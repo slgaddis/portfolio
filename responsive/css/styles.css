@@ -1,0 +1,187 @@
+/* Global Styles */
+
+header {
+    background-color: #0a0a1d; 
+    color: #ffffff;
+    text-align: center;
+    padding: 0
+
+}
+
+body {
+    background-color: #101821; 
+    color: #d1d1d2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: auto;
+    
+}
+#container {
+    background-color:#101821;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 25px; 
+    width: 80%;
+
+}
+.mlist_1 {
+    background-color: #0a0a1d; 
+    color: white;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+}
+
+.mlist_1 p {
+    font-size: 15px;
+}
+
+.mlist_2 {
+    background-color: #0a0a1d; 
+    color: white;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+}
+
+.mlist_2 p {
+    font-size: 15px;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+/* Mobile Style*/
+@media (min-width: 320px) {
+
+nav {
+    background-color:#0a0a1d;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav li {
+    display: block;
+}
+nav li a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background-color: #0a0a1d;
+    color: #D1D1D2;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 5px;
+
+}
+
+nav li a:hover {
+    background-color: color inherit;
+}
+
+.container {
+    width: 90%;
+    padding: 10px;
+}
+
+
+main {
+    padding: 20px;
+}
+
+h1,h2,h3 {
+    text-align:center;
+    color: #1E4D2B;
+}
+footer {
+    background-color: #0a0a1d; 
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+}
+
+
+a {
+        color: #00B8F4;
+    }
+
+ a:hover {
+        color: #FF3B30;
+    }  
+
+
+
+    
+
+}
+/* Tablet Styles*/
+@media (min-width: 768px) {
+
+nav li {
+display: inline-block;
+
+}
+
+nav li a {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    margin: 5px;
+}
+
+
+
+}
+
+
+
+/*Desktop Styles*/
+
+@media (min-width: 1024px) {
+
+    #container {
+        width: 75%;
+        margin: 10px auto;
+        border: 1px solid;
+    
+
+    }
+
+    nav {
+        padding: 10px;
+        margin: 0px;
+        margin-top: 0;
+        
+    }
+
+}
+
+hr {
+    display: none;
+}
+
+
+
