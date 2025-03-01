@@ -14,9 +14,16 @@ body {
     background-attachment: fixed;
     color: #ffffff;
     font-size: medium;
-    line-height: 1.6;
+    line-height: 1.8;
    
 
+}
+
+.video_loop {
+    width: 100%; /* Makes the video responsive */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the video */
 }
 
 
@@ -205,6 +212,13 @@ main {
     margin-bottom: 10px;
 }
 
+video {
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
 footer {
     background-color: #333;
     color: #ccc;
@@ -291,27 +305,25 @@ h1 {
     border-radius: 10px; /* Round corners for smooth appearance */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
-
-/* Definition list styling */
+/* Styling the definition list */
 dl {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
-/* Definition term styling */
 dt {
     font-weight: bold;
-    font-size: 1.4em;
-    color: #ffd452; /* Purple color for terms to stand out */
-    margin-top: 15px;
+    color: #f4d03f;
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
-/* Definition description styling */
 dd {
-    font-size: 1.1em;
-    line-height: 1.6; /* Increase line spacing for readability */
-    margin-left: 20px; /* Indent the description slightly */
-    color: #eddddd; /* Slightly lighter color for descriptions */
+    font-style: italic;
+    margin-left: 20px;
+    margin-bottom: 15px;
 }
+
 
 /* Hover effect for dt (terms) */
 dt:hover {
