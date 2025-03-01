@@ -1,0 +1,235 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/Final/images/er.jpg);
+    font-family: 'Georgia', serif;
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    color: #d4af37;
+}
+
+
+/* Image styling */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 100%; /* Makes the images responsive */
+}
+
+/* Add some padding and spacing for better readability */
+body {
+    padding: 20px;
+}
+
+.title {
+    font-size: 4em;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+
+
+nav ul {
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #a67c00;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #f4d03f;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.content-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border: 2px solid #5c4033;
+    border-radius: 10px;
+}
+
+.content-section h2 {
+    font-size: 2.5em;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #a67c00;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #f4d03f;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0;
+    color: #d4af37;
+}
+
+/* Boss container layout */
+.boss-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual boss styling */
+.boss {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.boss h2 {
+    color: #d4af37;
+    font-size: 1.5em;
+}
+
+.boss h3 {
+    color: #a67c00;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.boss-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.boss-image:hover {
+    transform: scale(1.05);
+}
+/* Container for both columns */
+.definitions-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to stack on small screens */
+    justify-content: space-around;
+    margin: 0 10%; /* Center the container */
+}
+
+/* Styling for each column */
+.definitions-column {
+    flex: 1 1 25%; /* Each column takes up 45% of the available width */
+    margin: 10px;
+    background-color: #000; /* White background for the definitions */
+    padding: 20px;
+    border-radius: 10px; /* Round corners for smooth appearance */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Definition list styling */
+dl {
+    margin: 0;
+}
+
+/* Definition term styling */
+dt {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #885b5b; /* Purple color for terms to stand out */
+    margin-top: 15px;
+}
+
+/* Definition description styling */
+dd {
+    font-size: 1.1em;
+    line-height: 1.6; /* Increase line spacing for readability */
+    margin-left: 20px; /* Indent the description slightly */
+    color: #eddddd; /* Slightly lighter color for descriptions */
+}
+
+/* Hover effect for dt (terms) */
+dt:hover {
+    color: #2980b9; /* Change color on hover for interactivity */
+    cursor: pointer;
+}
+
+
+/* Make the layout responsive */
+@media (max-width: 768px) {
+    .boss-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.definitions-container {
+    flex-direction: column; /* Stack the columns vertically */
+    margin: 0 5%; /* Less margin on small screens */
+}
+
+h1 {
+    font-size: 2em; /* Make the header slightly smaller */
+}
+
+.definitions-column {
+    flex: 1 1 100%; /* Each column takes up full width on small screens */
+}
+
+dt {
+    font-size: 1.2em; /* Make the term font size smaller */
+}
+
+dd {
+    font-size: 1em; /* Adjust description font size */
+}
+
+
+@media (max-width: 480px) {
+    .boss-container {
+        grid-template-columns: 1fr;
+    }
+}
