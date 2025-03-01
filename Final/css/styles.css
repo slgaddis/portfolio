@@ -7,7 +7,7 @@
 
 body {
     background-image: url(../images/er2.jpg);
-    font-family: 'Georgia', serif;
+    font-family: "Playfair Display", serif;
     background-color: #1a1a1a;
     background-size: cover;
     background-position: center center;
@@ -271,18 +271,25 @@ h1 {
 
 
 .boss-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap when needed */
+    justify-content: center; /* Center the entire content horizontally */
+    gap: 20px; /* Space between each boss item */
+    max-width: 1200px; /* Limit the width at max resolution */
+    margin: 0 auto; /* Center the boss-container */
 }
 
 
+
 .boss {
-    
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
+    text-align: center; /* Center text inside each boss container */
+    flex: 1 1 250px; /* Allow the items to shrink or grow with a base size of 250px */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Horizontally center the image and text */
+    justify-content: center; /* Vertically center the content inside the container */
+    width: 250px; /* Ensure each boss block has the same width */
+    margin-bottom: 20px; /* Adds some margin at the bottom of each item */
 }
 
 .boss h2 {
@@ -297,13 +304,13 @@ h1 {
 }
 
 .boss-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    width: 250px; /* Set a consistent width for all images */
+    height: 250px; /* Set a consistent height for all images */
+    object-fit: cover; /* Ensure image aspect ratio is preserved without stretching */
+    border: 3px solid #fff; /* Adds a white border around the image */
+    border-radius: 10px; /* Optional: Adds rounded corners to the border */
+    margin: 0 auto; /* Centers the image horizontally */
 }
-
 .boss-image:hover {
     transform: scale(1.05);
 }
@@ -350,7 +357,28 @@ dt:hover {
     cursor: pointer;
 }
 
+.classes-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
 
+/* Styles for each paragraph container */
+.class-paragraph {
+    flex: 1; /* Ensures equal width for both paragraphs */
+    background-color: #000000;
+    padding: 20px;
+    border: 2px solid #000000; /* Add a border around each paragraph */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+
+p {
+    text-align: justify;
+    color: #ffffff;
+    line-height: 1.6;
+}
 
 @media (max-width: 768px) {
     .boss-container {
