@@ -6,23 +6,110 @@
 }
 
 body {
-    background-image: url(/Final/images/er.jpg);
+    background-image: url(/Final/images/er2.jpg);
     font-family: 'Georgia', serif;
     background-color: #1a1a1a;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    color: #cccccc;
+    color: #ffffff;
+    font-size: medium;
     line-height: 1.6;
+   
+
 }
+
+
+
+/* Container for the background image */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ensure the container takes up the full height of the content */
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Add a semi-transparent overlay to darken the background */
+.background-container::before {
+    content: '';
+    position: fixed; /* Fix the overlay so it moves with the scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
+    z-index: -1; /* Ensure the overlay stays behind the content */
+}
+
+/* Content area */
+.content {
+    position: relative;
+    z-index: 1; /* Ensure the content stays above the overlay */
+    padding: 20px;
+}
+
 
 header {
     position: relative;
     text-align: center;
-    color: #d4af37;
+    color: #ffffff;
+
+}
+
+/* Video container styling */
+.video-container {
+    text-align: center; /* Center the video on the page */
+    margin: 40px auto;  /* Add margin around the video */
+    max-width: 90%;      /* Limit the max width of the video */
+}
+
+iframe {
+    width: 100%;  /* Ensure the iframe takes up 100% of its container */
+    max-width: 100%; /* Restrict the iframe from exceeding the container's width */
+    height: 500px;  /* Set a specific height (you can adjust this as needed) */
+    border-radius: 8px; /* Optional: Adds rounded corners to the iframe */
 }
 
 
+h1 {
+    text-align: center; /* Center the heading */
+    font-size: 3em; /* Large font size */
+    color: #2c3e50; /* Dark color */
+    margin: 40px 0; /* Add top and bottom margin */
+    font-weight: bold; /* Make it bold */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 2px; /* Add some space between letters */
+}
+
+/* Styling for H2 */
+h2 {
+    text-align: center; /* Center the heading */
+    font-size: 2.5em; /* Smaller than H1 but still prominent */
+    color: #ffffff;
+  
+    margin: 30px 0; /* Add top and bottom margin */
+    font-weight: 600; /* Semi-bold */
+    text-transform: capitalize; /* Capitalize the first letter of each word */
+}
+
+/* Styling for H3 */
+h3 {
+    text-align: center; /* Center the heading */
+    font-size: 2em; /* Slightly smaller than H2 */
+    color: #8e44ad; /* Purple color */
+    margin: 20px 0; /* Add top and bottom margin */
+    font-weight: 500; /* Regular weight */
+    letter-spacing: 1px; /* Add space between letters */
+}
+
+/* Optional: Add a border bottom to give emphasis */
+h1, h2, h3 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Creates a subtle shadow around text */
+}
 /* Image styling */
 img {
     display: block;
@@ -47,8 +134,8 @@ body {
 
 nav ul {
     list-style: none;
-    background-color: #333;
-    padding: 10px;
+    
+    padding: 1px;
     text-align: center;
 }
 
@@ -59,7 +146,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #a67c00;
+    color: #ffd452;
     font-size: 1.2em;
 }
 
@@ -79,9 +166,42 @@ main {
     border-radius: 10px;
 }
 
+/* Image container styling */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);  /* 3 equal-width columns */
+    gap: 20px;  /* Add space between images */
+    padding: 20px;
+    max-width: 1200px;  /* Max width for the container */
+    margin: 0 auto;  /* Center the container */
+}
+
+/* Styling for each image item */
+.image-item {
+    
+    border-radius: 8px; /* Rounded corners */
+   
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Style for images */
+.image-item img {
+    max-width: 100%;  /* Ensure images are responsive */
+    border-bottom: 2px solid #ddd;  /* Adds a border under the image */
+}
+
+/* Style for image captions */
+.image-item p {
+    padding: 15px;
+    font-size: 1.1em;
+    color: #ffffff;
+    margin: 0;
+}
+
 .content-section h2 {
     font-size: 2.5em;
-    color: #d4af37;
+    color: #ffd452;
     margin-bottom: 10px;
 }
 
@@ -113,7 +233,7 @@ footer ul li a:hover {
 h1 {
     text-align: center;
     margin: 40px 0;
-    color: #d4af37;
+    color:#ffd452;
 }
 
 /* Boss container layout */
@@ -126,24 +246,25 @@ h1 {
 
 /* Individual boss styling */
 .boss {
-    background-color: #2a2a2a;
+    
     padding: 15px;
     border-radius: 10px;
     text-align: center;
 }
 
 .boss h2 {
-    color: #d4af37;
+    color: #ffffff;
     font-size: 1.5em;
 }
 
 .boss h3 {
-    color: #a67c00;
+    color: #ffffff;
     font-size: 1.2em;
     margin-bottom: 10px;
 }
 
 .boss-image {
+    display: block;
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -165,7 +286,7 @@ h1 {
 .definitions-column {
     flex: 1 1 25%; /* Each column takes up 45% of the available width */
     margin: 10px;
-    background-color: #000; /* White background for the definitions */
+    background-color: #333; /* White background for the definitions */
     padding: 20px;
     border-radius: 10px; /* Round corners for smooth appearance */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
@@ -180,7 +301,7 @@ dl {
 dt {
     font-weight: bold;
     font-size: 1.4em;
-    color: #885b5b; /* Purple color for terms to stand out */
+    color: #ffd452; /* Purple color for terms to stand out */
     margin-top: 15px;
 }
 
